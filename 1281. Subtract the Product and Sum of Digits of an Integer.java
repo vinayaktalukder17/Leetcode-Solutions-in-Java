@@ -1,15 +1,15 @@
 class Solution {
     public int subtractProductAndSum(int n) {
-        int d=0;
-        int m=1,r=0,s=0;
+        int digit=0;
+        int prod=1,result=0,sum=0; //variable for product should be assigned with the value 1
         while(n>0)
         {
-            d=n%10;
-            m= m*d;
-            s = s+d;
+            digit=n%10; // To find the latest digit
+            prod= prod*digit; // Prouct of all digits
+            sum = sum+digit; // Sum of all digits
             n=n/10;
         }
-        r=m-s;
-        return r;
+        result = prod - sum;
+        return result;
     }
 }
